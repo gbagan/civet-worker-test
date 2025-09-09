@@ -1,0 +1,7 @@
+/* @refresh reload */
+import Worker from './worker.civet?worker'
+
+worker := new Worker()
+worker.onmessage = (e) => console.log(e.data)
+
+worker.postMessage ""
